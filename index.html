@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=McLaren&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title>Sweet Tooth Bliss</title>
+    <style>
+body {
+    background: url(fine-dining.jpg) center/cover no-repeat fixed;
+    font-family: Georgia, serif;
+    margin: 0;
+    height: 100vh;
+    padding-bottom: 27px;
+    background-color: #b7c4a1;
+}
+
+.header {
+    background: linear-gradient(to right, #e2738c, #e69aab);
+    color: #efbac6;
+    padding: 17px;
+    border-radius: 7px;
+    margin: 77px auto 27px auto;
+    
+    border: 1px solid #efbac6;
+    text-align: center;
+}
+
+.menu-card {
+    color: #efbac6;
+    border-radius: 17px;
+   
+}
+
+th {
+    color: #eaa8b7;
+    font-size: 1.27rem;
+    padding: 17px !important;
+}
+
+td {
+    padding: 7px !important;
+}
+
+.price {
+    font-weight: bold;
+    color: #e2738c;
+}
+
+.allergens {
+    margin-top: 17px;
+}
+
+.allergen-badge {
+    margin-right: 7px;
+    background-color: #eaa8b7;
+}
+
+
+.restaurant-icon {
+    font-size: 2.7rem;
+    margin-bottom: 7px;
+    color: #e69aab;
+}
+
+.navbar-custom {
+    background-color: #e88ca1;
+    font-size: 17px;
+    font-weight: 700;
+    color: #efbac6;
+    padding: 7px 17px;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+    color: #efbac6;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #e2738c;
+}
+
+#heading1 {
+    background: linear-gradient(to right, #e2738c, #e88ca1);
+    color: #efbac6;
+    font-size: 27px;
+    text-align: center;
+    padding: 17px;
+    
+    font-weight: bold;
+}
+
+.ouropening-hours {
+    font-size: 17px;
+    font-weight: bold;
+    color: #e2738c;
+    background-color: #efbac6;
+    padding: 7px 17px;
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 17px;
+}
+
+.dinein-box {
+    background: linear-gradient(to right, #e2738c, #e88ca1);
+    color: #fff;
+    font-size: 17px;
+    padding: 7px 27px;
+    border-radius: 7px;
+    box-shadow: 0 3px 10px #e69aab;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.order {
+    width: 207px;
+    padding: 10px 17px;
+    border-radius: 77px;
+    background-color: #e2738c;
+    color: white;
+    border: 2px solid #efbac6;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    display: inline-flex;
+    justify-content: center;
+    margin: 7px auto 0;
+    text-decoration: none;
+}
+
+.order:hover {
+    background-color: #e88ca1;
+    color: #efbac6;
+}
+
+    </style>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Qwinzy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>  
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="order.html">Order Now</a>  
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>  
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="header text-center">
+            <i class="fas fa-utensils restaurant-icon"></i>
+            <div id="name1" class="display-4 fw-bold"></div>
+            <div id="owner" class="fs-5 mt-2"></div>
+            <div id="since" class="fs-6"></div>
+        </div>
+       
+        <div class="menu-card">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th id="heading1" colspan="2"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="font-weight: bold;">
+                        <td>Product Name</td>
+                        <td>Price (₱)</td>
+                    </tr>
+                    <tr>
+                        <td id="prod1"></td>
+                        <td id="price1" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod2"></td>
+                        <td id="price2" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod3"></td>
+                        <td id="price3" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod4"></td>
+                        <td id="price4" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod5"></td>
+                        <td id="price5" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod6"></td>
+                        <td id="price6" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod7"></td>
+                        <td id="price7" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod8"></td>
+                        <td id="price8" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod9"></td>
+                        <td id="price9" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod10"></td>
+                        <td id="price10" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod11"></td>
+                        <td id="price11" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod12"></td>
+                        <td id="price12" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod13"></td>
+                        <td id="price13" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod14"></td>
+                        <td id="price14" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod15"></td>
+                        <td id="price15" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod16"></td>
+                        <td id="price16" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod17"></td>
+                        <td id="price17" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod18"></td>
+                        <td id="price18" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod19"></td>
+                        <td id="price19" class="price"></td>
+                    </tr>
+                    <tr>
+                        <td id="prod20"></td>
+                        <td id="price20" class="price"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ouropening-hours">
+           <i class="fas fa-clock me-2"></i><br>
+           <span class="open-time">OPEN: 7am - 7pm</span>
+        </div>
+
+        <div class="dinein-box text-center mt-4">
+           <span>Dine In and Takeout</span> <br>
+            <a href="order.html" class="order back-home-btn">
+           <i class="fas fa-shopping-cart me-2"></i> ORDER NOW
+           </a>
+        </div>
+
+        <br>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>

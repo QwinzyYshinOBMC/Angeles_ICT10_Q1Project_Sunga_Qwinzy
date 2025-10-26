@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=McLaren&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <title>Sweet Tooth Bliss</title>
+    <style>
+body {
+    background: url(fine-dining.jpg) center/cover no-repeat fixed;
+    font-family: Georgia, serif;
+    margin: 0;
+    height: 100vh;
+    padding-bottom: 27px;
+    background-color: #b7c4a1;
+}
+
+.order-container {
+    background: #eaa8b7;
+    border: 2px solid #e2738c;
+    width: 85%;
+    padding: 27px;
+    border-radius: 17px;
+    margin: 7% auto;
+}
+
+
+.order {
+    width: 177px;
+    padding: 10px 17px;
+    border-radius: 7px;
+    background-color: #e2738c;
+    color: #fff;
+    border: 2px solid #eaa8b7;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 7px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.order:hover {
+    background-color: #e88ca1;
+    color: #efbac6;
+}
+
+.textbox {
+    width: 100%;
+    padding: 7px;
+    margin: 7px 0;
+    border: 2px solid #e2738c;
+    background-color: #eaa8b7;
+    border-radius: 7px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.order-output {
+    background-color: #eaa8b7;
+    border: 2px solid #e2738c;
+    border-radius: 17px;
+    width: 85%;
+    padding: 17px;
+    margin: 17px auto;
+    font-size: 17px;
+}
+
+.order-output h3 {
+    text-align: center;
+    margin-top: 0;
+    color: #e2738c;
+}
+
+.ohurdear {
+    background-color: #efbac6;
+    border: 2px solid #e2738c;
+    border-radius: 17px;
+    width: 777px;
+    height: 347px;
+    margin: 17px auto;
+    font-size: 27px;
+}
+
+.navbar-custom {
+    background-color: #e2738c;
+    font-size: 17px;
+    font-weight: 700;
+    color: #efbac6;
+    padding: 7px 17px;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #efbac6;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #eaa8b7;
+}
+
+.back-home-container {
+    text-align: center;
+    margin-top: 17px;
+}
+
+.back-home-btn {
+    display: inline-block;
+    width: 177px;
+    padding: 10px 17px;
+    border-radius: 7px;
+    background-color: #e2738c;
+    color: #efbac6;
+    border: 2px solid #eaa8b7;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back-home-btn:hover {
+    background-color: #e88ca1;
+    color: #fff;
+}
+
+.back-home-btn i {
+    margin-right: 7px;
+}
+
+.menuq-items input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 7px;
+    margin-bottom: 7px;
+    vertical-align: middle;
+}
+
+.menuq-items label {
+    font-size: 17px;
+    display: block;
+}
+
+.menuq-column {
+    float: left;
+    width: 47%;
+    margin-right: 7%;
+}
+
+.page-header {
+    text-align: center;
+    margin: 27px auto;
+    background: linear-gradient(to right, #e2738c, #e69aab);
+    color: #efbac6;
+    padding: 17px;
+    border-radius: 7px;
+    width: 75%;
+    font-weight: bold;
+}
+
+#show {
+    color: #e2738c;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+    </style>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🍰 Sweet Tooth Bliss 🍰</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>  
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="order.html">Order Now</a>  
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>  
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="page-header">
+    <h1>Food Ordering System</h1>
+</div>
+   
+    <div class="order-container">
+        <h3>Menu:</h3>
+        <div class="menuq-items">
+    <div class="menuq-column">
+            <label><input type="checkbox" id="item1" value="1037"> Chocolate Fudge Cake</label>
+            <label><input type="checkbox" id="item2" value="1027"> Vanilla Butter Cake</label>
+            <label><input type="checkbox" id="item3" value="1017"> Red Velvet Cake</label>
+            <label><input type="checkbox" id="item4" value="1007"> Ube Cake</label>
+            <label><input type="checkbox" id="item5" value="1000"> Carrot Cake</label>
+            <label><input type="checkbox" id="item6" value="937"> Mocha Cake</label>
+            <label><input type="checkbox" id="item7" value="927"> Mango Cream Cake</label>
+            <label><input type="checkbox" id="item8" value="917"> Cookies and Cream Cake</label>
+            <label><input type="checkbox" id="item9" value="907"> Lemon Chiffon Cake</label>
+            <label><input type="checkbox" id="item10" value="900"> Black Forest Cake</label>
+    </div>
+
+    <div class="menuq2-column">
+        <label><input type="checkbox" id="item11" value="97"> Salted Caramel Cupcake</label>
+        <label><input type="checkbox" id="item12" value="98"> Strawberry Shortcake Cupcake</label>
+        <label><input type="checkbox" id="item13" value="97"> Chocolate Peanut Butter Cupcake</label>
+        <label><input type="checkbox" id="item14" value="98"> Matcha Green Tea Cupcake</label>
+        <label><input type="checkbox" id="item15" value="97"> Cookies and Cream Cupcake</label>
+        <label><input type="checkbox" id="item16" value="89"> Banoffee Cupcake</label>
+        <label><input type="checkbox" id="item17" value="87"> Blueberry Cheesecake Cupcake</label>
+        <label><input type="checkbox" id="item18" value="89"> Choco Mint Cupcake</label>
+        <label><input type="checkbox" id="item19" value="87"> Coconut Pandan Cupcake</label>
+        <label><input type="checkbox" id="item20" value="89"> S’mores Cupcake</label>
+    </div>
+
+    <br>
+        <h3>Customer Details:</h3>
+        <input type="text" id="customer" class="textbox" placeholder="Customer Name"><br>
+        <input type="text" id="address" class="textbox" placeholder="Address"><br>
+        <input type="text" id="contact_number" class="textbox" placeholder="Contact Number"><br>
+
+       <button type="submit" py-click="create_order" class="order">Submit Order</button>
+
+       </div>
+    </div>
+
+
+          <div id="orderSumq" class="order-output">
+           <h3>Order Summary</h3>
+            <div class="ohurdear">
+              <div id="order_output1"></div>
+              <div id="order_output2"></div>
+              <div id="order_output3"></div>
+              <div id="show"></div>
+              <input type="text" id="customer" class="textbox" placeholder="Summary..."><br>
+            </div>
+          </div>
+
+
+          <div class="back-home-container">
+             <a href="index.html" class="back-home-btn">
+             <i class="fas"></i> Back to Home
+             </a>
+          </div>
+
+          <br>
+
+    <script type="py" src="orderq.py"></script>
+</body>
+</html>
